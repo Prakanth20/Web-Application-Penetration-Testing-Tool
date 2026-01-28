@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    🧪 Scan Results
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Target: {{ url }}</h2>
+
+        {% if results %}
+        <table>
+            <tr>
+                <th>Vulnerability</th>
+                <th>Severity</th>
+                <th>CVSS</th>
+                <th>OWASP</th>
+            </tr>
+
+            {% for r in results %}
+            <tr class="
+                {% if r.severity == 'High' or r.severity == 'Critical' %}red
+                {% elif r.severity == 'Medium' %}orange
+                {% else %}green
+                {% endif %}
+            ">
+                <td>
+                    <b>{{ r.name }}</b><br>
+                    <small>{{ r.description }}</small>
+                </td>
+                <td>{{ r.severity }}</td>
+                <td>{{ r.cvss }}</td>
+                <td>{{ r.owasp }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <div class="result green">
+            ✅ No vulnerabilities detected
+        </div>
+        {% endif %}
+
+        <br>
+        <a href="/" style="color:#a5b4fc;">← Scan another website</a>
+    </div>
+
+</div>
+
+<footer class="footer">
+    © 2026 Web Penetration Testing Project
+</footer>
+
+</body>
+</html>
