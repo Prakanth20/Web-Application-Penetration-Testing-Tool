@@ -1,4 +1,4 @@
-## 🔐 Web Application Penetration Testing Tool
+# 🔐 Web Application Penetration Testing Tool
 
 A Flask-based web application designed to perform **basic automated penetration testing** on web applications.  
 This tool is intended **strictly for educational and academic purposes** and is tested only on **intentionally vulnerable websites**.
@@ -54,7 +54,7 @@ Results Displayed in Web UI
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/web-pentest-tool.git
+git clone https://github.com/Prakanth20/Web-Application-Penetration-Testing-Tool.git
 cd web-pentest-tool
 ````
 
