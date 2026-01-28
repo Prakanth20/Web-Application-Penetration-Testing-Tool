@@ -55,7 +55,7 @@ Results Displayed in Web UI
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/Prakanth20/Web-Application-Penetration-Testing-Tool.git
-cd web-pentest-tool
+cd Web-Application-Penetration-Testing-Tool
 ````
 
 ---
